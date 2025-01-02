@@ -91,7 +91,7 @@
                     &lt;figure class="w40 alinhaCentro"&gt;
                         &lt;img src="resources/image/2.jpg" alt="" class="noborder"&gt;
                         &lt;figcaption&gt;
-                            &lt;p class="textoLegenda">Pessoa falando em público.&lt;/&gt;
+                            &lt;p class="textoLegenda">Pessoa falando em público.&gt;
                         &lt;figcaption&gt;
                     &lt;figure&gt;
                     </pre>
@@ -118,17 +118,163 @@
             </div>
             <div class="code-item">
                 <h3>Botão p/ professor:</h3>
-                <pre>  
-                    &lt;a class="professor"&gt;Para o professor &lt;/a&gt;
-                        &lt;div class="professor"&gt;
-                            &lt;p>Comente&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;p class="quebraLinha">&lt;/p&gt;
+                <pre>  &lt;a class="professor"&gt;Para o professor &lt;/a&gt;
+                           &lt;div class="professor"&gt;
+                                &lt;p>Comente &lt;/p&gt;
+                           &lt;/div&gt;
+                       &lt;p class="quebraLinha">&lt;/p&gt;
                 </pre>
                 <button onclick="copyCode(this)">Copiar Código</button>
                 <span class="copied-message">Código copiado!</span>
             </div>
-        </div>
+            <div class="code-item">
+                <h3>Bullet point:</h3>
+                <pre>&lt;p&gt;&lt;span class="numeracao"&gt;•&lt;/span&gt;Quais&lt;/p&gt;</pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Enunciado número:</h3>
+                <pre>&lt;p class="enunciadoNumero"&gt;&lt;span class="numeracao"&gt;1.&lt;/span&gt;Ligue&lt;/p&gt;</pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Alternativas letra:</h3>
+                <pre>&lt;p class="alternativaLetra"&gt;&lt;span&gt;a)&lt;/span&gt;Como&lt;/p&gt;</pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Referências:</h3>
+                <pre>&lt;p class="textoReferencia"&gt;&lt;/p&gt;</pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Tabela básica:</h3>
+                <pre>
+                    &lt;table border="1"&gt;
+                        &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;titulo 1&lt;/th&gt;
+                            &lt;th&gt;titulo 2&lt;/th&gt;
+                            &lt;th&gt;titulo 3&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Body1 linha1&lt;/td&gt;
+                            &lt;td&gt;Body2 linha1&lt;/td&gt;
+                            &lt;td&gt;Body3 linha1&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                     &lt;/table&gt;
+                </pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Tabela com cécula vazia:</h3>
+                <pre>
+                    &lt;table border="1"&gt;
+                        &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;&nbsp;&lt;/th&gt;
+                            &lt;th&gt;titulo 2&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Body1 linha1&lt;/td&gt;
+                            &lt;td&gt;Body2 linha1&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                     &lt;/table&gt;
+                </pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Tabela com mais de uma linha/coluna:</h3>
+                <pre>
+                    &lt;table border="1"&gt;
+                        &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Nome&lt;/th&gt;
+                            &lt;th colspan="2"&gt;titulo 2&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Body1 linha1&lt;/td&gt;
+                            &lt;td&gt;Body2 linha1&lt;/td&gt;
+                            &lt;td&gt;Body3 linha1&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                     &lt;/table&gt;
+                </pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Caracteres especiais</h3>
+                <pre>
+                    <table border="1"&gt; style="text-align: center;">
+                    <thead>
+                        <tr>
+                            <th>Caractere</th>
+                            <th>Código HTML</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&lambda;</td>
+                            <td>&amp;lambda;</td>
+                        </tr>
+                        <tr>
+                            <td>&ell;</td>
+                            <td>&amp;ell;</td>
+                        </tr>
+                        <tr>
+                            <td>&Aring;</td>
+                            <td>&amp;Aring;</td>
+                        </tr>
+                        <tr>
+                            <td>&pi;</td>
+                            <td>&amp;pi;</td>
+                        </tr>
+                        <tr>
+                            <td>∆s</td>
+                            <td>∆s</td>
+                        </tr>
+                        <tr>
+                            <td>σ</td>
+                            <td>σ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </pre>
+            <!--    <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>--> 
+            </div>
+            <div class="code-item">
+                <h3>Blockquote citação:</h3>
+                <pre>&lt;blockquote class="citadoFIS"&gt;</pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Blockquote:</h3>
+                <pre>&lt;blockquote class="fio" style="margin: 2em 1em 1.4em 1em; text-align: center;"&gt;</pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+
+
+
+
+    
     </div>
 
     <script>
