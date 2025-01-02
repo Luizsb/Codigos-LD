@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Códigos LD</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .search-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-container input {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .code-item {
+            background: white;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .code-item h3 {
+            margin: 0 0 10px;
+        }
+        .code-item pre {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .code-item button {
+            padding: 7px 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .code-item button:hover {
+            background-color: #0056b3;
+        }
+        .copied {
+            background-color: green !important; /* Cor verde quando copiado */
+        }
+        .copied-message {
+            font-size: 14px;
+            color: green;
+            margin-left: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Biblioteca de Códigos LD</h1>
+    </header>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Pesquisar código ...">
+        </div>
+
+        <div id="code-library">
+            <div class="code-item" data-title="Exemplo de Filosofia">
+                <h3>Imagem com legenda:</h3>
+                <pre>
+                    &lt;figure class="w40 alinhaCentro"&gt;
+                        &lt;img src="resources/image/2.jpg" alt="" class="noborder"&gt;
+                        &lt;figcaption&gt;
+                            &lt;p class="textoLegenda">Pessoa falando em público.&gt;
+                        &lt;figcaption&gt;
+                    &lt;figure&gt;
+                    </pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Quebra linha</h3>
+                <pre>&lt;p class="quebraLinha"&gt;&lt;/p&gt;</pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Caixa de texto editável:</h3>
+                <pre>&lt;hr align="center" size="1" color="#CCC" style="line-height: 2em; margin: 2em 0 2em 2em;"&gt;</pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+            <div class="code-item">
+                <h3>Linha de texto:</h3>
+                <pre>&lt;input size="14" type="text" id="inputSpan-4" class="span-area-input" style="text-align: center;"&gt;</pre>
+                <button onclick="copyCode(this)">Copiar Código</button>
+                <span class="copied-message">Código copiado!</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para copiar o código
+        function copyCode(button) {
+            const code = button.previousElementSibling.innerText;
+            const message = button.nextElementSibling; // O span que contém a mensagem
+
+            navigator.clipboard.writeText(code).then(() => {
+                // Altera a cor do botão para verde
+                button.classList.add('copied');
+                
+                // Exibe a mensagem "Código copiado!"
+                message.style.display = 'inline';
+
+                // Remove a classe e a mensagem após 3 segundos
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    message.style.display = 'none';
+                }, 3000); // Exibe por 3 segundos
+            }).catch(err => {
+                alert('Erro ao copiar o código.');
+            });
+        }
+
+        // Função para filtrar os itens com base na busca
+        document.getElementById('search').addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            const codeItems = document.querySelectorAll('.code-item');
+
+            codeItems.forEach(item => {
+                const title = item.querySelector('h3').innerText.toLowerCase(); 
+                if (title.includes(searchTerm)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
