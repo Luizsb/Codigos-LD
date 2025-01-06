@@ -90,3 +90,22 @@ header {
 #backToTop:hover {
     background-color: #0056b3;
 }
+
+/* Cabeçalho fixo */
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.container {
+    margin-top: 80px; /* Compensa a altura do cabeçalho fixo */
+}
+
