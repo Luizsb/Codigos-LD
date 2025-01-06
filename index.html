@@ -246,20 +246,35 @@
         }
 
         // Função para filtrar os itens com base na busca
-        document.getElementById('search').addEventListener('input', function () {
-            const searchTerm = this.value.toLowerCase();
-            const codeItems = document.querySelectorAll('.code-item');
-
-            codeItems.forEach(item => {
-                const title = item.querySelector('h3').innerText.toLowerCase(); 
-                if (title.includes(searchTerm)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+       document.getElementById('search').addEventListener('input', function () {
+        const searchTerm = this.value.toLowerCase();
+        const codeItems = document.querySelectorAll('.code-item');
+        const noResultsMessage = document.querySelector('.no-results');
+        let hasResults = false;
+    
+        codeItems.forEach(item => {
+            const title = item.querySelector('h3').innerText.toLowerCase();
+            if (title.includes(searchTerm)) {
+                item.style.display = '';
+                hasResults = true;
+            } else {
+                item.style.display = 'none';
+            }
         });
+    
+        // Exibe ou oculta a mensagem de "nenhum resultado encontrado"
+        if (hasResults) {
+            noResultsMessage.style.display = 'none';
+        } else {
+            noResultsMessage.style.display = 'block';
+        }
+    });
     </script>
+
+        <!-- Texto quando código não encontrado -->
+        <div id="code-library">
+        <div class="no-results" style="display: none;">Nenhum código encontrado.</div>
+        </div>
 
          <!-- Botão rolar ao topo -->
         <button id="backToTop" title="Voltar ao topo">↑</button>
