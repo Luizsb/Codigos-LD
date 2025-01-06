@@ -106,7 +106,7 @@ header {
 }
 
 .container {
-    margin-top: 145px; /* Compensa a altura do cabeçalho fixo */
+    margin-top: 150px; /* Compensa a altura do cabeçalho fixo */
 }
 
 /* Exibe mensagem quando código não encontrado */
