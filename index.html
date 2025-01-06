@@ -15,8 +15,10 @@
             <input type="text" id="search" placeholder="Pesquisar código ...">
         </div>
 
+        <!--Blocos de código aqui -->
+
         <div id="code-library">
-            <div class="code-item" data-title="Exemplo de Filosofia">
+            <div class="code-item">
                 <h3>Imagem com legenda:</h3>
                 <pre>
                     &lt;figure class="w40 alinhaCentro"&gt;
@@ -29,6 +31,8 @@
                 <button onclick="copyCode(this)">Copiar Código</button>
                 <span class="copied-message">Código copiado!</span>
             </div>
+
+             <!-- Outro bloco de código aqui -->
             
             <div class="code-item">
                 <h3>Quebra linha</h3>
@@ -217,10 +221,9 @@
                 <span class="copied-message">Código copiado!</span>
             </div>
 
-
-
+            
     </div>
-    
+
     <script>
         // Função para copiar o código
         function copyCode(button) {
@@ -258,12 +261,10 @@
                 }
             });
         });
-    </script>
-     <!-- Botão -->
-  <button id="backToTop" title="Voltar ao topo">↑</button>
 
-  <script>
-    // Seleciona o botão
+        // Função botão rolar ao topo
+    
+    <button id="backToTop" title="Voltar ao topo">↑</button>
     const backToTopButton = document.getElementById('backToTop');
 
     // Mostra o botão ao rolar para baixo
@@ -282,7 +283,8 @@
         behavior: 'smooth'
       });
     });
-  </script>
+        
+    </script>
         
 </body>
 </html>
