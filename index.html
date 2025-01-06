@@ -71,6 +71,36 @@
             margin-left: 10px;
             display: none;
         }
+
+        /* Estilo do botão */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+
+    #backToTop.show {
+      opacity: 1;
+    }
+
+    #backToTop:hover {
+      background-color: #0056b3;
+    }
+        
     </style>
 </head>
 
@@ -328,5 +358,30 @@
             });
         });
     </script>
+     <!-- Botão -->
+  <button id="backToTop" title="Voltar ao topo">↑</button>
+
+  <script>
+    // Seleciona o botão
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Mostra o botão ao rolar para baixo
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+
+    // Volta ao topo ao clicar
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+        
 </body>
 </html>
