@@ -263,29 +263,29 @@
         });
 
         // Função botão rolar ao topo
-        const backToTopButton = document.getElementById('backToTop');
-    
-        // Mostra o botão ao rolar para baixo
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 300) {
-            backToTopButton.classList.add('show');
-          } else {
-            backToTopButton.classList.remove('show');
-          }
-        });
-    
-        // Volta ao topo ao clicar
-        backToTopButton.addEventListener('click', () => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        });
-        
+        // Seleciona o botão
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Mostra o botão ao rolar para baixo
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+
+    // Volta ao topo ao clicar
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
     </script>
 
-    <!-- Botão para voltar ao topo -->
-    <button id="backToTop" title="Voltar ao topo">↑</button>
+    <!-- Botão -->
+  <button id="backToTop" title="Voltar ao topo">↑</button>
         
 </body>
 </html>
