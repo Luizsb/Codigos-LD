@@ -109,4 +109,11 @@ header {
     margin-top: 145px; /* Compensa a altura do cabeçalho fixo */
 }
 
+/* Exibe mensagem quando código não encontrado */
+.no-results {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5); /* Cor com transparência */
+    margin-top: 20px;
+}
 
