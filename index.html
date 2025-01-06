@@ -203,8 +203,6 @@
                     </tbody>
                 </table>
                 </pre>
-            <!--    <button onclick="copyCode(this)">Copiar Código</button>
-                <span class="copied-message">Código copiado!</span>--> 
             </div>
             
             <div class="code-item">
@@ -221,11 +219,9 @@
                 <span class="copied-message">Código copiado!</span>
             </div>
 
-            
     </div>
 
     <!-- Scripts -->
-
     <script>
         // Função para copiar o código
         function copyCode(button) {
@@ -265,30 +261,32 @@
         });
     </script>
 
-         <!-- Botão -->
-  <button id="backToTop" title="Voltar ao topo">↑</button>
+         <!-- Botão rolar ao topo -->
+        <button id="backToTop" title="Voltar ao topo">↑</button>
+
+        
 
         <script>
-    // Seleciona o botão
-    const backToTopButton = document.getElementById('backToTop');
-
-    // Mostra o botão ao rolar para baixo
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.add('show');
-      } else {
-        backToTopButton.classList.remove('show');
-      }
-    });
-
-    // Volta ao topo ao clicar
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
+            // Função para rolar ao topo
+            const backToTopButton = document.getElementById('backToTop');
+        
+            // Mostra o botão ao rolar para baixo
+            window.addEventListener('scroll', () => {
+              if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+              } else {
+                backToTopButton.classList.remove('show');
+              }
+            });
+        
+            // Volta ao topo ao clicar
+            backToTopButton.addEventListener('click', () => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            });
+          </script>
 
    
         
