@@ -45,17 +45,7 @@
             noResultsMessage.style.display = 'block';
         }
     });
-    </script>
 
-        <!-- Texto quando código não encontrado -->
-        <div id="code-library">
-        <div class="no-results" style="display: none;">Nenhum código encontrado.</div>
-        </div>
-
-         <!-- Botão rolar ao topo -->
-        <button id="backToTop" title="Voltar ao topo">↑</button>
-
-        <script>
             // Função para rolar ao topo
             const backToTopButton = document.getElementById('backToTop');
         
