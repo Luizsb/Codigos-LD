@@ -4,16 +4,23 @@ body {
     margin: 0;
     background-color: #f4f4f9;
 }
-header {
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #007BFF;
     color: white;
     padding: 20px;
     text-align: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .container {
-    margin: 20px auto;
-    max-width: 800px;
+    margin-top: 80px; /* Compensa a altura do cabeçalho fixo */
 }
+
 .search-container {
     margin-bottom: 20px;
     text-align: center;
