@@ -70,7 +70,25 @@ function redirectToLibrary() {
     window.location.href = "https://luizsb.github.io/Codigos-LD/";
 }
 
-// Dark mode
-document.getElementById('toggle-dark-mode').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+// Destaque no texto buscado
+document.getElementById('search-bar').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+    const codeBlocks = document.querySelectorAll('.code-container pre');
+
+    // Remove destaque anterior
+    codeBlocks.forEach(block => {
+        block.innerHTML = block.textContent; // Restaura o texto original
+    });
+
+    // Adiciona destaque ao novo termo
+    if (searchTerm) {
+        codeBlocks.forEach(block => {
+            const originalText = block.textContent;
+            const regex = new RegExp(`(${searchTerm})`, 'gi'); // Busca termo, ignorando maiúsculas/minúsculas
+            const highlightedText = originalText.replace(regex, '<span class="highlight">$1</span>');
+            block.innerHTML = highlightedText;
+        });
+    }
 });
+
+                    
