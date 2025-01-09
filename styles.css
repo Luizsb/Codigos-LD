@@ -138,4 +138,14 @@ body {
     font-weight: bold;
 }
 
+/* Dark mode */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+.code-item.dark-mode {
+    background-color: #2e2e2e;
+    border-color: #444;
+}
 
