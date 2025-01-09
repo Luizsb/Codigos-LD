@@ -25,37 +25,37 @@ body {
     text-align: center; 
 }
 
+/* Caixa de pesquisa */
 .search-container {
-    position: relative; /* Necessário para posicionar o botão "Limpar" */
-    display: inline-block;
+    position: relative; /* Para posicionar o botão dentro do container */
+    display: flex;      /* Usa flexbox para manter o layout alinhado */
+    align-items: center;
 }
 
 .search-container input {
-    width: calc(90% - 80px); /* Ajusta o tamanho do input para acomodar o botão */
+    width: 100%;        /* A caixa de pesquisa mantém seu tamanho original */
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px; /* Bordas arredondadas apenas no lado esquerdo */
+    border-radius: 5px; /* Bordas arredondadas para o input */
+    margin-right: 10px; /* Espaço entre o input e o botão */
 }
 
 .search-container button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
     background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 0 5px 5px 0; /* Bordas arredondadas apenas no lado direito */
-    padding: 0 15px;
+    border-radius: 5px;
+    padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    display: none; /* Inicialmente escondido */
+    display: none; /* Escondido inicialmente */
 }
 
 .search-container button:hover {
     background-color: #0056b3;
 }
+
 
 
 
