@@ -39,6 +39,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px; /* Bordas arredondadas para o input */
     margin-right: 10px; /* Espaço entre o input e o botão */
+    margin-bottom: 18px;
 }
 
 .search-container button {
