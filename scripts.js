@@ -69,3 +69,8 @@ backToTopButton.addEventListener('click', () => {
 function redirectToLibrary() {
     window.location.href = "https://luizsb.github.io/Codigos-LD/";
 }
+
+// Dark mode
+document.getElementById('toggle-dark-mode').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
