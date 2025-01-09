@@ -46,11 +46,12 @@ body {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 15px;
+    padding: 11px 15px;
     font-size: 16px;
     cursor: pointer;
     display: none; /* Escondido inicialmente */
     margin-top: -18px;
+    margin-left: -10px;
 }
 
 .search-container button:hover {
