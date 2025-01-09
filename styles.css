@@ -19,6 +19,7 @@ body {
 }
 .container {
     margin-top: 80px; /* Compensa a altura do cabeçalho fixo */
+    max-width: 800px;
 }
 
 .search-container {
