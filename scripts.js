@@ -74,12 +74,12 @@ function redirectToLibrary() {
 const searchInput = document.getElementById('search');
 const clearButton = document.getElementById('clearSearch');
 
-// Exibe ou esconde o botão "X" com base no valor do input
+// Exibe ou esconde o botão "Limpar" com base no valor do input
 searchInput.addEventListener('input', () => {
     clearButton.style.display = searchInput.value ? 'block' : 'none';
 });
 
-// Limpa o campo de pesquisa ao clicar no botão "X"
+// Limpa o campo de pesquisa ao clicar no botão "Limpar"
 clearButton.addEventListener('click', () => {
     searchInput.value = '';
     clearButton.style.display = 'none';
