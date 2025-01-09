@@ -70,4 +70,18 @@ function redirectToLibrary() {
     window.location.href = "https://luizsb.github.io/Codigos-LD/";
 }
 
-                    
+//Limpar pesquisa
+const searchInput = document.getElementById('search');
+const clearButton = document.getElementById('clearSearch');
+
+// Exibe ou esconde o botão "X" com base no valor do input
+searchInput.addEventListener('input', () => {
+    clearButton.style.display = searchInput.value ? 'block' : 'none';
+});
+
+// Limpa o campo de pesquisa ao clicar no botão "X"
+clearButton.addEventListener('click', () => {
+    searchInput.value = '';
+    clearButton.style.display = 'none';
+    searchInput.dispatchEvent(new Event('input')); // Dispara o evento para atualizar os resultados da pesquisa
+});
