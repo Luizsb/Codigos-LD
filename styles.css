@@ -48,12 +48,14 @@ body {
 }
 .code-item h3 {
     margin: 0 0 10px;
+    text-align: left;
 }
 .code-item pre {
     background: #f9f9f9;
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
+    text-align: left;
 }
 .code-item button {
     padding: 7px 12px;
@@ -64,6 +66,7 @@ body {
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s ease;
+    text-align: left;
 }
 .code-item button:hover {
     background-color: #0056b3;
