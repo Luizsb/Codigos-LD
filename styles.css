@@ -132,3 +132,10 @@ body {
     margin-top: 20px;
 }
 
+/* Destaca o texto encontrado */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+
