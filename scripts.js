@@ -14,7 +14,7 @@ function copyCode(button) {
         setTimeout(() => {
             button.classList.remove('copied');
             message.style.display = 'none';
-        }, 3000); // Exibe por 3 segundos
+        }, 2000); // Exibe por 3 segundos
     }).catch(err => {
         alert('Erro ao copiar o código.');
     });
