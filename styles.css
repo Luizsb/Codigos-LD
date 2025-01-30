@@ -75,16 +75,10 @@ body {
     margin: 0 0 10px;
     text-align: left;
 }
-.code-item pre {
-    background: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto;
-    text-align: left;
-}
+
 .code-item button {
     padding: 7px 12px;
-    background-color: #007BFF;
+    background-color: hsl(211, 100%, 50%);
     color: white;
     border: none;
     border-radius: 3px;
@@ -153,6 +147,18 @@ body {
     margin-top: 20px;
 }
 
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    tab-size: 4; /* Define o tamanho da tabulação */
+    white-space: pre-wrap; /* Mantém a formatação e quebra de linha */
+    word-wrap: break-word;
+}
 
-
-
+code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+}
