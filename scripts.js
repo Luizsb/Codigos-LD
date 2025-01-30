@@ -85,3 +85,29 @@ clearButton.addEventListener('click', () => {
     clearButton.style.display = 'none';
     searchInput.dispatchEvent(new Event('input')); // Dispara o evento para atualizar os resultados da pesquisa
 });
+
+// Função de cópia atualizada
+function copyCode(button) {
+    const codeBlock = button.closest('.code-item').querySelector('code');
+    const code = codeBlock.textContent;
+    
+    navigator.clipboard.writeText(code).then(() => {
+        const message = button.nextElementSibling;
+        message.style.display = 'inline';
+        setTimeout(() => message.style.display = 'none', 2000);
+    });
+}
+
+// Adicione esta inicialização
+document.addEventListener('DOMContentLoaded', function() {
+    Prism.highlightAll();
+});
+
+
+// Extrai o conteúdo dos comentários dentro de <code>
+document.querySelectorAll('code.language-html').forEach(codeBlock => {
+const commentContent = codeBlock.innerHTML.match(/<!--([\s\S]*?)-->/);
+    if (commentContent && commentContent[1]) {
+         codeBlock.textContent = commentContent[1].trim();
+    }
+});
