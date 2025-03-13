@@ -482,6 +482,7 @@
 </h2>
 </blockquote> --></code></pre>
     <button onclick="copyCode(this)">Copiar Código</button>
+    <button onclick="downloadTag()">Baixar Tag</button> 
     <span class="copied-message">Código copiado!</span>
 </div>
 
@@ -502,5 +503,16 @@
       <script src="scripts.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+	   <script>
+		   function downloadTag() {
+		    const link = document.createElement('a');
+		    link.href = 'https://raw.githubusercontent.com/Luizsb/Codigos-LD/refs/heads/main/tagConte%C3%BAdoDigital.png';
+		    link.download = 'tagConteudoDigital.png'; // Nome do arquivo a ser baixado
+		    document.body.appendChild(link);
+		    link.click();
+		    document.body.removeChild(link);
+			}
+	   </script>
    </body>
 </html>
