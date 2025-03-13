@@ -505,14 +505,22 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 
 	    <script>
-            function downloadTag() {
-                const link = document.createElement('a');
-                link.href = 'https://raw.githubusercontent.com/Luizsb/Codigos-LD/refs/heads/main/tagConte%C3%BAdoDigital.png';
-                link.download = 'tagConteudoDigital.png';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }
+         async function downloadTag() {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/Luizsb/Codigos-LD/refs/heads/main/tagConte%C3%BAdoDigital.png');
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'tagConteudoDigital.png';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url); // Limpa o URL do objeto
+    } catch (error) {
+        console.error('Erro ao baixar a tag:', error);
+    }
+}
         </script>
    </body>
 </html>
